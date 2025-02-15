@@ -1,0 +1,28 @@
+input{
+    border-radius: 5px;
+    border: solid 1px rgb(204, 197, 197);
+    padding: 7px 10px;
+}
+select{
+    border-radius: 5px;
+    border: solid 1px rgb(204, 197, 197);
+    padding: 7px 10px;
+}
+button{
+    border: solid 1px rgb(72, 29, 107);
+    padding:  7px 10px;
+    border-radius:  3px;
+    color: white;
+    background-color: rgb(72, 29, 107);
+}
+table{
+    width:100%;
+}
+table, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td {
+    padding: 15px;
+    font-weight: bold;
+}

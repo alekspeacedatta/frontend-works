@@ -1,0 +1,129 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="c.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="boundaries">
+        <header>
+            <div class="nav-contact">   
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">faqs</a></li>
+                        <li><a href="#">contact</a></li>    
+                        <li>
+                            <div class="select-lang">
+                                <div class="select-btn">
+                                    <img class="language-icon" src="country flags/united-kingdom.png" alt="">
+                                    <a href="#" class="sBtn-text">ENG</a>
+                                    <i class="fa-solid fa-angle-down"></i>  
+                                </div>
+                                <ul class="options">
+                                    <li class="option">
+                                        <img src="country flags/georgia.png" alt="" class="language-icon">
+                                        <span class="option-text">GEO</span>
+                                    </li>
+                                    <li class="option">
+                                        <img src="country flags/germany.png" alt="" class="language-icon">
+                                        <span class="option-text">GER</span>
+                                    </li>
+                                    <li class="option">
+                                        <img src="country flags/portugal.png" alt="" class="language-icon">
+                                        <span class="option-text">POR</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <div class="contacts">
+                    <ul class="nav">
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-inbox"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="nav-panel-background">
+                <a href=""><h2>canvas</h2></a>
+                <div class="nav-input">
+                    <nav class="bar">
+                       <ul>
+                            <li class="hideOnMobile"><a class="first-a" href="">home</a></li>
+                            <li class="hideOnMobile"><a href="">what We Do</a></li>
+                            <li class="hideOnMobile"><a href="">services</a></li>
+                            <li class="hideOnMobile"><a href="">faqs</a></li>
+                            <li class="hideOnMobile"><a href="">contact</a></li>
+                        </ul>
+                    </nav>
+                    
+                        <form action="" class="search-form">
+                            <input type="text" class="search-input" placeholder="Search...">
+                            <button class="search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>                          
+                        <a  class="btn-G" href="">get started</a>
+                    
+                </div>
+                <nav class="side-bar">
+                    <ul>
+                        <li onclick=hideSideBar()><a href=""><i class="fa-solid fa-x"></i></a></li>
+                        <li><a class="first-a" href="">home</a></li>
+                        <li><a href="">what We Do</a></li>
+                        <li><a href="">services</a></li>
+                        <li><a href="">faqs</a></li>
+                        <li><a href="">contact</a></li>
+                    </ul>
+                </nav>
+                <li class="sidebutton" style="margin-right: 30px;" onclick=showSideBar()><a href="#"><i class="fa-solid fa-bars" width="26" height="26"></i></a></li>
+            </div>
+        </header>
+
+        <main>
+            <div>
+                <span class="Seo">SEO Ready</span>
+                <div class="main-text">
+                <h1>Improve your SEO <br> With Data</h1>
+                    <h3>- Boost your own <span>Awesome</span> Website.</h3>
+                    <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia <br> vitae molitia dignissimos ab qui aspernatur.</p>
+                </div>
+
+                <div class="button-box">
+                    <a class="btn-G"   href="">Get Started</a>
+                    <div id="contactPopup" class="popup">
+                        <div class="popup-content">
+                          <span id="closeBtn" class="close">&times;</span>
+                          <h2>Contact Us</h2>
+                          <form id="contactForm">
+                            <label for="name">Your Name:</label>
+                            <input  class="inp" type="text" id="name" name="name" placeholder="Enter your name" required>
+                    
+                            <label for="email">Your Email:</label>
+                            <input class="inp" type="email" id="email" name="email" placeholder="Enter your email" required>
+                    
+                            <label for="message">Your Message:</label>
+                            <textarea class="textarea" id="message" name="message" placeholder="Enter your message" required></textarea>
+                    
+                            <button type="submit" class="submit-btn">Submit</button>
+                          </form>
+                        </div>
+                      </div>
+                    <button class="btn-C" id="showFormBtn" >Contact Us</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js.js"></script>
+   
+</body>
+</html>

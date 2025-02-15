@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+   font-family: "Poppins", serif;
+   font-weight: 400;
+   font-style: normal;
+}
+body{
+   background-image: url(images/hero-1.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;  
+}
+li{
+   list-style: none;
+}
+.boundaries{
+   max-width: 1400px;
+   margin-left: auto;
+   margin-right: auto;
+      a{
+         text-transform: capitalize;
+         text-decoration: none;
+         color: black;
+         font-size: 14px;
+      }
+}
+.nav-contact{
+   display: flex;
+   justify-content: space-between;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   .nav{
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      width: 317px;
+   a{
+      text-transform: uppercase;
+      font-weight: 1000;
+      opacity: .7;
+   }
+   }
+   .nav li ul.drop-down{
+      padding: 0;
+      display: none;
+   }
+   .nav li{
+      cursor: pointer;
+   }
+   .nav li:hover ul.drop-down{
+      padding: 30px;
+      display: block;
+      position: absolute;
+      margin-top: 30px;
+      background-color: white;
+      
+   }
+   .drop-down li a:hover{
+      background-color: #7a7979;
+   }
+   .language-icon{
+      width: 24px;
+      height: 24px;
+   }
+   .select-lang .select-btn {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background: none; /* Remove background */
+      padding: 0; /* Remove padding */
+      box-shadow: none; /* Remove box shadow */
+      border: none; /* Remove any potential border */
+      height: auto; /* Let it size automatically */
+   }
+   
+   .select-lang .select-btn .sBtn-text {
+      font-size: inherit; /* Match the font size with other nav items */
+      font-weight: inherit; /* Inherit the font weight */
+      text-transform: uppercase; /* Apply the same text transformation as other links */
+      opacity: 0.7; /* Match the opacity */
+   }
+   
+   .select-lang .select-btn i {
+      font-size: 16px; /* Adjust icon size to match the nav style */
+      margin-left: 5px;
+      transform: rotate(0); /* Keep default icon state */
+      transition: transform 0.3s;
+   }
+   
+   .select-lang.active .select-btn i {
+      transform: rotate(180deg); /* Rotate icon on active */
+   }
+   
+   .select-lang .options {
+      margin-top: 5px;
+      padding: 0;
+      box-shadow: none; /* Remove box shadow */
+      background: transparent; /* Set background to transparent */
+      position: absolute; /* Keep dropdown positioning */
+      display: none; /* Keep dropdown hidden by default */
+   }
+   
+   .select-lang.active .options {
+      display: block; /* Show dropdown when active */
+      background: white; /* Set dropdown background */
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Optional soft shadow for dropdown */
+   }
+   
+   .options .option {
+      padding: 5px 10px;
+   }
+   
+   .option .language-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+   }
+   
+   .option .option-text {
+      font-size: 14px;
+   }
+   
+}
+
+.nav-panel-background{
+   background-color: white;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+   border: 2px solid white;
+   border-radius: 4px;
+   box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.13);
+   -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.13);
+   -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.13);
+   .nav-input{
+      display: flex;
+      align-items: center;
+      margin-right: 44px;
+      div{
+         display: flex;
+         align-items: center;
+      }
+   }
+   .nav-input .bar ul{
+      display: flex;
+      justify-content: space-between
+   }
+   .btn-G{
+      transition: .5;
+      border: 2px solid #fe9407;
+      border-radius: 3px;
+      background-color: #fe9407;
+      color: white;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+   }
+   .btn-G:hover{
+      border-radius: 7px;
+   }
+   form{
+      display: flex;
+      align-items: center;
+      margin: 20px 20px 20px 20px;
+      padding: 0;
+      width: 50px; 
+      overflow: hidden;
+      transition: width 0.5s ease; 
+      justify-content: flex-end;
+      .search-input{
+         flex: 1;
+         opacity: 0;
+         border-radius: 10px;
+         width: 0;
+         margin-left: 25px;  
+         padding: 5px 10px;
+         font-size: 16px;
+         border: 1px solid #ccc;
+         border-right: none;
+         border-radius: 4px 0 0 4px;
+         outline: none;
+         transition: width 0.5s ease, opacity 0.5s ease;
+      }
+      .search{
+         margin: 0;
+         border: 2px solid white;
+         border-radius: 0 4px 4px 0;
+         background-color: white;
+         border: none;
+         padding: 10px 10px;
+         font-size: 15px;
+         cursor: pointer;
+        
+      }
+   }
+ 
+   .search-form:hover .search,
+   .search-form:focus-within .search {
+   background-color: orange; 
+   color: white; 
+   }
+   .search-form:hover,
+   .search-form:focus-within {
+   width: 420px; 
+   }
+   .search-form:hover .search-input,
+   .search-form:focus-within .search-input {
+   width: 100%;
+   opacity: 1;
+   }
+
+   .first-a{
+      color: #fe9407;
+   }
+   .first-a:hover{
+     color: black;
+   }
+   h2{
+      margin-left: 47px;
+      font-weight: 650;
+      font-size: 30px;
+   }
+   i{
+      transition: .5s;
+      margin-left: 10px;
+      margin-right: 10px;
+   }
+   ul{
+      width: 400px;
+   }
+   a{
+      transition: .3s;
+      font-weight: 600;
+   }
+   nav ul li a:hover{
+      color: #fe9407;
+      font-weight: bold;
+   }
+}
+
+
+main{
+   margin-top: 200px;
+   margin-left: 40px;
+   margin-bottom: 200px;
+   .Seo{
+      transition: .5s;
+      font-weight: 700;
+      font-size: 13px;
+      border: 2px solid #fe9407;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius: 3px;
+   }
+   .Seo:hover{
+      color: black;
+      border: 2px solid black;
+   }
+   span{
+      color: #fe9407;
+   }
+   .main-text{
+      h1{
+         font-weight: bolder;
+         font-size: 50px;
+      }
+      h3{
+         font-weight: bolder;
+         color: #a9a9aa;
+         span{
+            font-weight: bolder;
+         }     
+      }
+      p{
+         font-weight: 500;
+         color: #a9a9aa;
+      }
+   }
+   .button-box{
+      margin-top: 50px;
+      .btn-G{
+         transition: .5s;
+         border-radius: 3px;
+         border: 2px solid #fe9407;
+         background-color: #fe9407;
+         color: white;
+         padding-left: 25px;
+         padding-right: 25px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+      }
+      .btn-G:hover{
+         border-radius: 7px;
+      }
+      .btn-C{
+         border: 2px solid #a9a9aa;
+         background-color: white ;
+         padding-left: 25px;
+         padding-right: 25px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+         cursor: pointer;
+         transition: .5s;
+      }
+      .btn-C:hover{
+         border-radius: 6px;
+      }
+   }
+}
+
+.popup {
+   display: none;
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.7); 
+   justify-content: center;
+   align-items: center;
+   animation: fadeIn 0.4s ease-in-out;
+ }
+ 
+
+ .popup-content {
+   background: #fff;
+   padding: 40px;
+   border-radius: 20px;
+   width: 420px;
+   text-align: center;
+   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+   animation: slideIn 0.4s ease-in-out;
+ }
+ 
+ .popup h2 {
+   font-size: 28px;
+   margin-bottom: 20px;
+   color: #333;
+   font-weight: 600;
+ }
+ 
+ label {
+   font-size: 16px;
+   margin-bottom: 6px;
+   text-align: left;
+   display: block;
+   color: #555;
+ }
+ 
+ .inp, .textarea {
+   width: 100%;
+   padding: 14px;
+   margin-bottom: 20px;
+   border-radius: 10px;
+   border: 1px solid #ddd;
+   font-size: 16px;
+   transition: border-color 0.3s ease, transform 0.3s ease;
+ }
+ 
+ .inp:focus, .textarea:focus {
+   border-color: #ffcc00; 
+   transform: scale(1.05); 
+ }
+ 
+ .textarea {
+   height: 140px;
+   resize: none;
+ }
+ 
+ .submit-btn {
+   width: 100%;
+   padding: 14px;
+   background-color: #fe9407; 
+   color: white;
+   font-size: 18px;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+ .submit-btn:hover {
+   background-color: #bd6d05; 
+   transform: scale(1.05);
+ }
+ .close {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   font-size: 30px;
+   font-weight: bold;
+   color: #aaa;
+   cursor: pointer;
+   transition: color 0.3s ease;
+ }
+ 
+ .close:hover {
+   color: #333;
+ }
+ .side-bar{
+   position: fixed;
+   top: 0;
+   right: 0;
+   height: 100vh;
+   width: 250px;
+   z-index: 999;
+   background-color: rgba(255, 255, 255, 0.2);
+   box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+   backdrop-filter: blur(10px);
+   display: none;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: flex-start;
+ }
+ .side-bar li{
+   width: 100%;
+   margin-top: 30px;
+   margin-bottom: 50px;   
+   
+ }
+ .side-bar a{
+   width: 100%;
+   font-size: 26px;
+ }
+ .sidebutton{
+   display: none;
+ }
+ @media screen and (max-width: 590px) {
+   .hideOnMobile{
+      display: none;
+   }
+   .sidebutton{
+      display: block;
+   }
+   .nav-contact{
+      display: none;
+   }
+   .nav-input{
+      display: none;
+   }
+   .search-form{
+      display: none;
+   }
+   .bar{
+      display: none;
+   }
+   .nav-input .btn-G{
+      display: none;
+   }
+   .search-input{
+      display: none;
+   }
+   .search{
+      display: none;
+   }
+   
+}
+ @media screen and (max-width: 450px) {
+   .side-bar{
+      width: 100%;
+   }
+   .hideOnMobile{
+      display: none;
+   }
+   .sidebutton{
+      display: block;
+   }
+   .nav-contact{
+      display: none;
+   }
+   .nav-input{
+      display: none;
+   }
+   .search-form{
+      display: none;
+   }
+   .bar{
+      display: none;
+   }
+   .nav-input .btn-G{
+      display: none;
+   }
+   .search-input{
+      display: none;
+   }
+   .search{
+      display: none;
+   }
+}
