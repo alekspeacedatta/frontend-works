@@ -1,0 +1,256 @@
+@font-face{
+    font-family: centurygothic;
+    src: url(fonts/centurygothic.ttf);
+}
+*{
+    font-family: centurygothic ;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header{
+    background-color: #c1121f;
+    color: white;
+    padding: 10px 0px;
+}
+header .header-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-content nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+}
+.header-content nav ul li a{
+    font-size: 18px;
+}
+.section-one{
+    margin: 100px auto;
+}
+.section-one h1{
+    font-size: 40px;
+    text-align: center;
+}
+.api-slider{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 105px;
+}
+.api-slider ul {
+    list-style: none;
+    display: flex;
+    gap: 55px;
+    flex-direction: column;
+}
+.api-slider ul li span{
+    font-size: 20px;
+}
+.api-slider ul li h4{
+    width: 350px;
+    font-size: 14px;
+}
+/* .sc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 392.6px;
+} */
+/* Added a container to properly wrap and hide overflow */
+.slider-container {
+    width: 226px;
+    overflow: hidden; /* Ensures only one slide is visible at a time */
+    position: relative;
+}
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+}
+.iphone-back {
+    background-color: #f45032;
+    padding: 80px 50px;
+    border-radius: 105px; /*45 */
+    border: #f45032;
+    position: relative;
+    z-index: 1; /* Base layer */
+}
+
+.iphoneX {
+    width: 250px;
+    position: relative; 
+    z-index: 4; 
+}
+.sc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 392.6px;
+    z-index: 3; 
+}
+.grey {
+    /* background-color: #c8cccf;
+    width: 350px;
+    height: 43px;
+    position: absolute;
+    left: 0px;
+    top: 623px;
+    border-radius: 0px 0px 56px 56px;
+    z-index: 2; */
+    background-color: #d1d1d1;
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    top: 564px;
+    border-radius: 0px 0px 150px 150px;
+    z-index: 2;
+}
+/* .middle-grey{
+    width: 350px;
+    height: 70px;
+    left: 0px;
+    bottom: 30px;
+    position: absolute;
+    background-color: #d5d7d7;
+    z-index: 3;
+    border-radius: 0 0 7px 9px;
+    overflow: hidden;
+} */
+.slide {
+    min-width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slide1{
+    background-image: url(img/00.png);
+    height: 400px;
+}
+.slide2{
+    background-image: url(img/11.png);
+}
+.slide3{
+    background-image: url(img/33.png);
+}
+.slide4{
+    background-image: url(img/44.png);
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.opacity{     
+    opacity: 1;
+}
+.non-opacity{
+    opacity: 0.50;
+}
+.item.item1:hover, .item.item2:hover, .item.item3:hover, .item.item4:hover{
+    opacity: 1;
+}
+.item{
+    cursor: pointer;
+    display: flex;
+    gap: 25px;
+    transition: ease-in-out 0.5s;
+}
+.item .item-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6px;
+}
+.bullet{
+    width: 10px;
+    height: 15px;
+    padding: 10px;
+    border-radius: 50px
+}
+.sub-bullet{
+    width: 10px;
+    height: 11px;
+    border-radius: 50px;
+    background-color: black;
+    transition: ease-in-out .5s;
+}
+.active{
+    width: 10px;
+    height: 11px;
+    border-radius: 50px;
+    background-color: white;
+    transition: ease-in-out .5s;
+}
+.bullet-active{
+    width: 10px;
+    height: 15px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #f45032;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out .5s;
+}
+
+footer{
+    padding: 20px 0px;
+    background-color: #c1121f;
+    display: flex;
+    justify-content: space-around;
+}
+footer ul{
+    list-style: none;
+}
+footer ul li a{
+    color: white;
+}
+@media (max-width: 1024px) {
+    .sc{
+        left: 145px;
+    }
+}
+@media (max-width: 768px) {
+    .iphone-back{
+        padding: 45px 50px;
+    }
+    .grey{
+        top: 495px;
+    }
+    .sc{
+        left: 94px;
+    }
+    .api-slider{
+        gap: 60px;
+    }
+    .api-slider ul li h4 {
+        width: 240px;
+        font-size: 14px;
+    }
+    nav{
+        display: none;
+    }
+}
+@media (max-width: 540px) {
+    .api-slider{
+        flex-direction: column;
+    }
+    .sc{
+        top: 100px;
+        left: 50%;
+        transform: translateX(-49.5%);
+    }
+}
