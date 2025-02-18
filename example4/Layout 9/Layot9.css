@@ -1,0 +1,414 @@
+@font-face {
+    font-family: font;
+    src: url(fonts/centurygothic.ttf);
+}
+*{
+    font-family: font;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+header{
+    position: relative;
+    z-index: 2;
+    margin-top: 30px;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 50px;
+    position: relative; /* Needed for the pseudo-element */
+}
+
+.header-content::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transform: translateX(-50%);
+    animation: borderExpand 1.8s ease-out forwards;
+}
+@keyframes borderExpand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.logo{
+    font-size: 35px;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color .5s ease-in-out;
+}
+.logo::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: black;
+    transition: height .5s ease-in-out;
+    z-index: -1;
+}
+.logo:hover::before{
+    height: 100%;
+}
+.logo:hover{
+    color: white;
+}
+.search-div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 150px;
+}
+.header-content .search-div input{
+    width: 400px;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 10px;
+}
+.header-content nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+.header-content nav ul li a {
+    position: relative;
+    font-size: 16px;
+    padding: 10px 10px 12px 10px;
+    overflow: hidden;
+    transition: color .5s ease-in-out;
+}
+.header-content nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: black;
+    transition: height .5s ease-in-out;
+    z-index: -1;
+}
+.header-content nav ul li a:hover::before {
+    height: 100%;
+}
+
+.header-content nav ul li a:hover {
+    color: white;
+}
+.menu{
+    display: none;
+    cursor: pointer;
+}
+.menu i{
+    font-size: 20px;
+}
+.burger-menu{
+    position: absolute;
+    /* display: none; */
+    z-index: 1;
+    background-color: white;
+    transform: translateY(-520px);
+    transition: transform 1s ease ;
+    padding: 30px 0;
+    width: 100%;
+}
+.burger-menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    list-style: none;
+    gap: 50px;
+}
+.burger-menu ul li{
+    position: relative;
+    padding: 10px 10px;
+    
+}
+.burger-menu ul li a{ 
+    font-weight: bold;
+    font-size: 18px;
+    color: black
+}
+.burger-menu ul li:hover {
+    background-color: black;
+    transition: .3s ease-in-out;
+}
+.burger-menu ul li:hover  a{
+    color: white;
+    transition: .3s ease-in-out;
+}
+.burger-menu ul li::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+.bound{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-one{
+    margin: 100px 0 0 0 ;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.image-container img {
+    width: 100%;
+    height: auto; 
+    border-radius: 20px; 
+}
+.content div img{
+    width: 480px;
+    border-radius: 20px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 510px;
+    flex-wrap: wrap;
+}
+.text  h2{
+    font-size: 35px;
+}
+.text .boxes{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.box.box3, .box.box4{
+    margin-top: 60px;
+}
+.boxes .box{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    width: 207px;
+}
+.boxes .box p{
+    font-size: 15px;
+}
+ .boxes .box button {
+    position: relative;
+    background-color: white;
+    color: black;
+    border: 2px black solid;
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 10px 23px;
+    overflow: hidden; 
+    transition: color 0.3s ease-in-out; 
+    z-index: 1; 
+} 
+.boxes .box button:hover {
+    background-color: black;
+    color: white; 
+    transition:  0.3s ease-in-out;
+}
+
+
+
+.section-two{
+    margin: 150px 0;
+}
+.section-two .content img{
+    width: 650px;
+}
+.section-two .content .text.text2{
+    width: 315px;
+    justify-content: center;
+    gap: 30px;
+}
+.section-two .content .text.text2 h1{
+    font-size: 40px;
+    width: 280px;
+}
+
+
+
+.section-three{
+    margin-bottom: 200px;
+}
+.section-three .content .text.text3{
+    width: 340px;
+    justify-content: center;
+    gap: 30px;
+}
+.section-three .content .text.text3 h1{
+    font-size: 36px;
+}
+.section-three .content img{
+    width: 650px;
+    height: 400px;
+}
+
+
+
+
+
+
+footer{
+    max-width: 1300px;
+    margin: 50px auto 30px auto;
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8px;
+}
+footer ul{
+    line-height: 1.5;
+    list-style: none;
+}
+footer ul h2{
+    margin-bottom: 15px;
+}
+footer ul span{
+    font-size: 27px;
+}
+footer ul li a{
+    font-size: 15px;
+    text-decoration: underline;
+}
+@media (max-width: 1024px){
+    .text h2{
+        font-size: 30px;
+    }
+    .boxes .box p{
+        font-size: 13px;
+    }
+    .content{
+        justify-content: space-evenly;
+    }
+    .content1 div img{
+        width: 440px;
+    }
+    .section-two .content img{
+        width: 550px;
+    }
+    .section-three .content img{
+        width: 550px;
+        height: auto;
+    }
+}
+@media (max-width: 912px) {
+    .content1{
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+    .text1{
+        align-items: center;
+    }
+    .content2, .content3{
+        justify-content: space-evenly;
+    }
+    .section-two .content img{
+        width: 320px;
+    }
+    .section-three .content img{
+        width: 320px;
+        height: auto;
+    }
+}
+@media (max-width: 540px){
+    header{
+        margin: 0;
+        padding-top: 30px;
+        background-color: white;
+    }
+    nav{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .section-one{
+        transition: transform 1s ease ;
+    }
+    .logo{
+        padding: 0;
+    }
+    .header-content{
+        padding: 0;
+        justify-content: space-around;
+        align-items: center;
+        gap: 166px;
+    }
+    .content1 div img{
+        width: 300px;
+    }
+    .text1{
+        width: 300px;
+    }
+    .text1 .boxes{
+        flex-direction: column;
+    }
+    .boxes .box{
+        text-align: center;
+        align-items: center;
+    }
+    .boxes .box2{
+        margin-top: 60px;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-two .content img{
+        width: 300px;
+    }
+    .section-three .content img{
+        width: 300px;
+        height: auto;
+    }
+    .section-three .content .text.text3 {
+        width: 300px;
+    }
+    .section-two .content .text.text2{
+        width: 300px;
+    }
+    .content3{
+        flex-direction: column-reverse;
+    }
+    .content2, .content3{
+        gap: 25px;
+    }
+    .text1 h2{
+        margin-bottom: 30px;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+}
