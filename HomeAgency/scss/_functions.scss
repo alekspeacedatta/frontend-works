@@ -1,0 +1,5 @@
+@import "./variables";
+
+@function fontsize($font-name){
+    @return map-get($fontSizes , $font-name );
+}
