@@ -1,1 +1,1 @@
-Hi in this examples there are some different layouts which are good for practicing in html css and js
+Hi! In these examples, you'll find different layouts that are great for practicing HTML, CSS, and JavaScript. The first layouts are the easiest, while the later ones are more complex.
