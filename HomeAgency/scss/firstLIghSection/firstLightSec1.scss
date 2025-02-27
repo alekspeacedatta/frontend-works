@@ -1,0 +1,385 @@
+@import '../mixins';
+@import '../variables';
+header{
+    background-color: $darkbackcolor;
+    padding: 10px 0px;
+    & .header-content{
+        @include bound;
+        @include defaultLayout(row, 0);
+        justify-content: space-between;
+        & h4{
+            @include h4;
+            color: white;
+        }
+        & nav{
+            display: block;
+            & ul{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                & a{
+                    color: $textGrayButBlack;
+                    text-decoration: none;
+                }
+            }
+        }        
+        & button{
+            @include transparentButton(138px);
+        }
+    }
+}
+.hero-page{
+    padding: 50px 0px;
+    background-color: $darkbackcolor;
+    & .hero-content{
+        @include bound;
+        @include defaultLayout(row, 0);
+        & .hero-text{
+            @include defaultLayoutText(90px);
+            .text{
+                @include defaultLayoutText(20px);
+                & .btns{
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                    & .btn{
+                        border: none;
+                        color: white;
+                        font-size: fontsize(text-small);
+                        background-color: $darkbackcolor;
+                    }
+                }
+            }
+            & h5{
+                @include h5;
+            }
+            & h1{
+                @include h1;
+                width: 428px;
+                @media (max-width:376px){
+                    font-size: 52px;
+                    width: 329px;
+                }
+            }
+            & .text-gray{
+                @include textGray('dark');
+                width: 470px;
+                @media (max-width:376px){
+                    width: 329px;
+                }
+            }
+            & .orange-button{
+                @include orangeButton;
+            }
+            & .btn{
+                cursor: pointer;
+            }
+            & .coment{
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                & .text-gray-but{
+                    color: rgba(255, 255, 255, 100%);
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+.companies{
+    background-color: $lightbackcolor;
+    padding: 80px 0px;
+    & .cpm{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 1170px;
+        margin: 0 auto;
+    }
+    & .companies-content{
+        @include bound; 
+    }
+}
+.pre-line{
+    background-color: $lightbackcolor;
+    height: 2px;
+    & .line{
+        width: 1170px;
+        margin: 0 auto;
+        height: 2px;
+        background-color: #F3D1BF;
+    }
+}
+.about{
+    background-color: $lightbackcolor;
+    padding: 100px 0px;
+    padding-top: 101px;
+    padding-bottom: 161px;
+    & .about-content{
+        @include bound;
+        @include defaultLayout(row, 0px);
+        & .about-text{
+            @include defaultLayoutText(20px);
+            & h5{
+                @include h5;
+            }
+            & h2{
+                @include h2('light');
+                width: 357px;
+            }
+            & .text-big{
+                @include textBig('light');
+            }
+            & .text-gray{
+                width: 470px;
+                @include textGray('light');
+            }
+            & .white-button{
+                @include whiteButton(138px)
+            }
+        }
+    }
+}
+.our-achivments{
+    background-color: $lightbackcolor;
+    padding-bottom: 140px;
+    & .boxes{
+        @include bound;
+        display: flex;
+        justify-content: center;
+        & .box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            border: 2px solid #F3D1BF;
+            width: 365px;
+            height: 176px;
+            padding-left: 25px;
+            h3{
+                @include h3('light');
+                font-weight: 500
+            }
+            h4{
+                @include h4;
+                font-weight: 400;
+            }
+        }
+        & .box2{
+            border-left: none;
+            border-right: none;
+        }
+
+    }
+}
+.how-we-work{
+    background-color: $lightbackcolor;
+    padding-bottom: 92px;
+    .how-we-work-content{
+        @include bound;
+        @include defaultLayout(row, 0);
+        .how-we-work-text{
+            @include defaultLayoutText(20px);
+            gap: 30px;
+            h5{
+                @include h5;
+                font-weight: 500;
+            }
+            h3{
+                @include h3('light');
+                font-weight: 400;
+                width: 383px;
+            }
+            .text-gray{
+                @include textGray("light");
+                width: 470px;
+            }
+            .h5a{
+                @include h4;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+        .list{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            .l{
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                h1{
+                    @include h1;
+                    color: $primarycolor;
+                    font-weight: 400; 
+                }
+                h4{
+                    @include h4;
+                    font-weight: 400;
+                }
+            }
+        }   
+    }
+}
+.video-reel{
+    background-color: $lightbackcolor;
+    padding-top: 127px;
+    padding-bottom: 191px;
+    & .video-reel-content{
+        @include bound;
+        @include defaultLayout(row, 0px);
+        & .video-reel-text{
+            @include defaultLayoutText(20px);
+            & h5{
+                @include h5;
+            }
+            & h3{
+                width: 470px;
+                @include h3('light');
+            }
+            & .text-gray{
+                width: 470px;
+                margin-top: 30px;
+                @include textGray('light');
+            }
+        }
+    }
+}
+@media (max-width: 425px){
+    header{
+        .header-content{
+            padding: 10px;
+            & nav{
+                display: none;
+            }
+        }
+    }
+    .hero-page .hero-content{
+        flex-direction: column-reverse;
+        gap: 20px;
+        .hero-text{
+            width: 329px;
+            gap: 50px;
+            h1{
+                font-size: 52px;
+                width: 329px;
+            }
+            .text-gray{
+                width: 329px;
+            }
+            
+            .text{
+                gap: 20px;
+            }
+            .coment{
+                .text-gray{
+                    width: 263px;
+                }
+            }
+        }
+        & .hero-svg{
+            width: 329px;
+            height: 334px;
+        }
+    }
+    .companies{
+        .companies-content{
+            padding: 0;
+            .cpm{
+                gap: 20px;
+                width: 300px;
+            }
+        }
+    }
+    .pre-line{
+        & .line{
+            width: 320px;
+        }
+    }
+    .about{
+        padding-bottom: 120px;
+        .about-content{
+            flex-direction: column;
+            gap: 20px;
+            svg{
+                width: 329px;
+                height: 340px;
+            }
+            .about-text{
+                padding-left: 20px;
+                .text-big{
+                    width: 300px;
+                }
+                .text-gray{
+                    width: 329px;
+                }
+            }
+        }
+    }
+    .our-achivments{
+        padding-bottom: 98px;
+        .boxes{
+            flex-direction: column;
+            padding: 0;
+            .box{
+                width: 329px;
+                padding-left: 20px;
+                margin-left: 10px;
+                border-left: 2px solid #F3D1BF;
+                border-right: 2px solid #F3D1BF;
+            }
+            .box2{
+                border-bottom: none;
+                border-top: none;
+            }
+        }
+    }
+    .how-we-work{
+        .how-we-work-content{
+            flex-direction: column;
+            align-items: normal;
+            gap: 88px;
+            padding: 0;
+            margin-left: 30px;
+            .how-we-work-text{
+                h3{
+                    width: 329px;
+                }
+                .text-gray{
+                    width: 329px;
+                }
+                .h5a{
+                    font-size: 16px;
+                }
+            }
+            .list{
+                width: 300px;
+            }
+        }
+    }
+    .video-reel{
+        padding-bottom: 73px;
+        .video-reel-content{
+            flex-direction: column;
+            gap: 30px;
+            margin-left: 10px;
+            padding: 0;
+            svg{
+                width: 329px;
+                height: 212px;
+            }
+            .video-reel-text{
+                h3{
+                    width: 329px;
+                }
+                .text-gray{
+                    width: 329px;
+                }
+            }
+        }
+    }
+}
